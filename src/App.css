@@ -20,12 +20,11 @@ html {
   opacity: 0;
   transform: translateX(10vw);
   visibility: hidden;
-  transition: opacity 400ms ease-out, transform 400ms ease-out, visibility 400ms ease-out;
+  transition: opacity 400ms ease-out, transform 100ms ease-out, visibility 400ms ease-out;
   will-change: opacity, transform, visibility;
-
 }
 
-.fade-side-section:hover + .fade-side-section {
+.fade-side-section:hover ~ .fade-side-section {
   transform: translateX(30px);
   transition: transform 100ms ease-out;
 }
@@ -51,13 +50,13 @@ html {
 .box2 {
   width: 200px;
   height: 300px;
+  border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 -10px;
   transition-duration: 0.2s;
   background-image: linear-gradient(to left, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0));
-  border-radius: 15px;
   box-shadow: -2rem 0 3rem -2rem rgba(0,0,0,0.5);
 }
 
