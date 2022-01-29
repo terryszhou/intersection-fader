@@ -1,4 +1,4 @@
-import { Box, Text, HStack, Flex } from '@chakra-ui/react';
+import { Box, Text, Header, Flex } from '@chakra-ui/react';
 
 import './App.css';
 import { colors } from './css-colors';
@@ -11,6 +11,7 @@ export const App = () => {
       <h1>All the CSS Colors!</h1>
       <Flex>
         <div style={{ width: "50%", margin: "0 2px" }}>
+          <h1>Standard Implementation</h1>
           {colors.map(color => (
             <FadeInSection>
               <div className="box" style={{ backgroundColor: color }}>
@@ -20,6 +21,7 @@ export const App = () => {
           ))}
         </div>
         <Box w={"50%"} mx={2}>
+          <Text>Chakra Implementation</Text>
           {colors.map(color => (
             <FadeInSectionChakra>
               <Box
@@ -41,5 +43,3 @@ export const App = () => {
     </div>
   );
 };
-
-export default App;
