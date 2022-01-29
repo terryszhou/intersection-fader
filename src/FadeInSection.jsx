@@ -12,10 +12,7 @@ export const FadeInSection = ({ children }) => {
   }, []);
 
   return (
-    <div
-      className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
-      ref={domRef}
-    >
+    <div className={`fade-in-section ${isVisible && 'is-visible'}`} ref={domRef}>
       {children}
     </div>
   );

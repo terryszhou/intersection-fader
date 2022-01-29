@@ -19,8 +19,7 @@ export const FadeInSectionChakra = ({ children }) => {
       visibility={isVisible ? "visible" : "hidden"}
       transition={"opacity 600ms ease-out, transform 600ms ease-out, visibility 600ms ease-out"}
       willChange={"opacity, transform, visibility"}
-      ref={domRef}
-    >
+      ref={domRef}>
       {children}
     </Box>
   );
