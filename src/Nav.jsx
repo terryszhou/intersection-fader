@@ -13,7 +13,7 @@ export const Nav = () => (
 const styles = {
   navbar: {
     backgroundColor: 'rgb(51,51,51)',
-    padding: "5px",
+    padding: "20px",
     position: "fixed",
     width: "100vw",
     zIndex: 2,

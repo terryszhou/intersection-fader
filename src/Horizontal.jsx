@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Center, HStack, Text } from "@chakra-ui/react";
+import { Box, VStack, HStack, Text, Circle } from "@chakra-ui/react";
 
 import { colors } from "./css-colors";
 import { FadeSide } from "./FadeSide";
@@ -8,7 +8,6 @@ import { FadeSideChakra } from "./FadeSideChakra";
 export const Horizontal = () => {
   return (
     <div className="App">
-      <h1>All the CSS Colors!</h1>
       <div style={styles.rowContainer}>
         <div style={styles.impContainerWrap}>
           <div style={styles.impContainer}>
@@ -19,6 +18,13 @@ export const Horizontal = () => {
           <FadeSide>
             <div className="box2" style={{ backgroundColor: color }}>
               <span>{color}</span>
+              <div style ={{
+                width: "50px",
+                height: "50px",
+                backgroundColor: color,
+                borderRadius: "50%",
+                filter: "invert(1)",
+              }}/>
             </div>
           </FadeSide>
         ))}
@@ -30,7 +36,7 @@ export const Horizontal = () => {
           p={"6px"}
           bg={"linear-gradient(to bottom right, rgb(234,123,55), rgb(200,34,58), rgb(78,143,150))"}
           borderRadius={"25px"}
-          marginRight={"20px"}>
+          marginRight={"14px"}>
           <Box
             w={"100%"}
             h={"100%"}
@@ -48,11 +54,14 @@ export const Horizontal = () => {
         </Box>
         {colors.map(color => (
           <FadeSideChakra>
-            <Center
+            <VStack
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"space-around"}
               w={"200px"}
               h={"300px"}
               borderRadius={"25px"}
-              mx={"-10px"}
+              mx={"-14px"}
               bgImage={"linear-gradient(to left, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0))"}
               bgColor={color}
               boxShadow={"-2rem 0 3rem -2rem rgba(0,0,0,0.5)"}
@@ -69,7 +78,13 @@ export const Horizontal = () => {
                 fontWeight={"bold"}>
                 {color}
               </Text>
-            </Center>
+              <Circle
+                w={50}
+                h={50}
+                bgColor={color}
+                filter={"invert(1)"}
+              />
+            </VStack>
           </FadeSideChakra>
         ))}
       </HStack>
@@ -82,7 +97,8 @@ const styles = {
     height: "50vh",
     display: "flex",
     alignItems: "center",
-    overflow: "scroll"
+    overflow: "scroll",
+    borderRadius: "25px",
   },
   rowHeader: {
     marginTop: "140px",
