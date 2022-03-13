@@ -77,7 +77,6 @@ html {
   border-radius: 25px;
   display: flex;
   justify-content: space-around;
-
   align-items: center;
   margin: 0 -10px;
   transition-duration: 0.2s;
@@ -101,4 +100,8 @@ html {
 h1 {
   font-weight: bold;
   font-size: 24px;
+}
+
+::selection {
+  /* background-color: green; */
 }
